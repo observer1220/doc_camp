@@ -21,7 +21,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build website
-        working-directory: doc_camp
         run: yarn build
 
       # Popular action to deploy to GitHub Pages:
