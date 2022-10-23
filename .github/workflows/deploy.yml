@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        cache-dependency-path: "**/package-lock.json"
+        cache-dependency-path: "doc_camp/package-lock.json"
       - name: Build website
         working-directory: doc_camp
         run: yarn build
