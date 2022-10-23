@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: "阿傑水電工程行",
+  tagline: '專修屋頂止水閥',
   url: 'https://github.com',
   baseUrl: '/doc_camp/',
   onBrokenLinks: 'throw',
