@@ -2,46 +2,29 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 露營設施
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## 露友食堂
 
-## Getting Started
+可以嚐到深受露友喜愛的古巴三明治及多種豐富澎湃的餐食。另午後這裡的主流不是喝下午茶，是吃各款冰品，全台首創「冰品共和國」也在這裡登場讓你吃撐撐啊! 來這裡享受美食伴無敵海景，這樣才對墾丁味，更對你的味!
+![](./../static/img/equipment/1.jpg)
 
-Get started by **creating a new site**.
+## 公共衛浴
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+園區內於各區域共設有五座盥洗設備，讓露友可以自由選擇最近的盥洗間。沙灘玩耍，各式水上活動後最想投奔處。備有冷熱水、沐浴乳、洗髮乳，貼心到連椅子都在內，沖去一身疲憊後下一站~陽台上吹風。
+![](./../static/img/equipment/2.jpg)
 
-### What you'll need
+## 炊事屋
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+整個營區內設有三座炊事屋，內有冰箱、多組瓦斯爐、飲水機，居然還有製冰機，這是營主怕大家颳風下雨時還在外奮鬥煮飯糊口的貼心設計，同時也能減輕露友的裝備，使您露營時更加輕鬆。
+![](./../static/img/equipment/3.jpg)
 
-## Generate a new site
+## 生態活動教室
 
-Generate a new Docusaurus site using the **classic template**.
+備有近百個座位、大型投影布幕，面對巴士海峽的獨特海景，在海面的波光瀲灩將腦海裡的想像延伸，激盪出絕佳的創意花火。
+![](./../static/img/equipment/4.jpg)
 
-The classic template will automatically be added to your project after you run the command:
+## 黑潮市服務中心
 
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+這裡隨時為您提供旅遊諮詢，協助您達成上山下海的願望。更特別的是還有一個專為露友而設的八角小區，來杯古巴風特調，夜晚微醺神遊哈瓦那。
+![](./../static/img/equipment/5.jpg)

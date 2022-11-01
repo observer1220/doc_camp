@@ -1,0 +1,8 @@
+{
+  "label": "營位介紹",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "這裡是介紹文字"
+  }
+}

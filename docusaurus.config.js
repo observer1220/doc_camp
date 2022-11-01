@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "稻美濃生態農場",
-  tagline: '放慢腳步，體驗山林之美',
+  title: "貓鼻頭露營莊園",
+  tagline: '永恆的國境之南',
   url: 'https://github.com',
   baseUrl: '/doc_camp/',
   onBrokenLinks: 'throw',
@@ -58,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '稻美濃生態農場',
+        title: '貓鼻頭露營莊園',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -121,7 +121,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 貓鼻頭露營莊園－箴雅設計`,
       },
       prism: {
         theme: lightCodeTheme,
