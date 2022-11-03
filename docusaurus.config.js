@@ -57,6 +57,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia:{
+        apiKey: "cf8e1169aabead63a438c734bf145b93",
+        appId: "EQ378FJWR1",
+        indexName: "doc_camp",
+      },
       navbar: {
         title: '貓鼻頭露營莊園',
         logo: {
