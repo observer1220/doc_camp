@@ -4,8 +4,9 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
 import styles from './index.module.css';
+import { Carousel } from 'antd';
+import 'antd/dist/antd.css';
 
 function HomepageHeader () {
   const { siteConfig } = useDocusaurusContext();
@@ -22,12 +23,17 @@ function HomepageHeader () {
           </Link>
         </div>
       </div>
+
     </header>
   );
 }
 
 export default function Home () {
   const { siteConfig } = useDocusaurusContext();
+
+  const onChange = (currentSlide) => {
+    console.log(currentSlide);
+  };
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -36,6 +42,11 @@ export default function Home () {
       <main>
         <HomepageFeatures />
       </main>
+      <Carousel afterChange={onChange} autoplay effect="fade">
+        <img src='./img/carousel/1.jpg' />
+        <img src='./img/carousel/2.jpg' />
+        <img src='./img/carousel/3.jpg' />
+      </Carousel>
     </Layout>
   );
 }
