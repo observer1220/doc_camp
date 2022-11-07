@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "貓鼻頭露營莊園",
-  tagline: '永恆的國境之南',
+  tagline: '探索自然，樂享野營趣味，盡在國境之南',
   url: 'https://github.com',
   baseUrl: '/doc_camp/',
   onBrokenLinks: 'throw',

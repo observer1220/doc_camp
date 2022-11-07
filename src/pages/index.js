@@ -45,7 +45,7 @@ export default function Home () {
         <img src='./img/camp/e-5.jpg' />
         <img src='./img/camp/f-5.jpg' />
       </Carousel>
-      {/* <HomepageHeader /> */}
+      <HomepageHeader />
       <main>
         <HomepageFeatures />
       </main>
