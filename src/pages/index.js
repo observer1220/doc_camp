@@ -23,7 +23,6 @@ function HomepageHeader () {
           </Link>
         </div>
       </div>
-
     </header>
   );
 }
@@ -32,20 +31,23 @@ export default function Home () {
   const { siteConfig } = useDocusaurusContext();
 
   const onChange = (currentSlide) => {
-    console.log(currentSlide);
+    // console.log(currentSlide);
   };
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      {/* <HomepageHeader /> */}
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
       </main>
       <Carousel afterChange={onChange} autoplay effect="fade">
-        <img src='./img/carousel/1.jpg' />
-        <img src='./img/carousel/2.jpg' />
-        <img src='./img/carousel/3.jpg' />
+        <img src='./img/camp/a-4.jpg' />
+        <img src='./img/camp/b-4.jpg' />
+        <img src='./img/camp/c-3.jpg' />
+        <img src='./img/camp/d-2.jpg' />
+        <img src='./img/camp/e-5.jpg' />
+        <img src='./img/camp/f-5.jpg' />
       </Carousel>
     </Layout>
   );
