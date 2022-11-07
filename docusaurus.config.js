@@ -99,7 +99,7 @@ const config = {
               },
               {
                 label: '交通方式',
-                to: '/doc_camp/docs/聯絡我們',
+                to: '/doc_camp/docs/交通方式',
               },
             ],
           },
