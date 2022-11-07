@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdoc_camp=self.webpackChunkdoc_camp||[]).push([[7040],{8263:e=>{e.exports=JSON.parse('{"permalink":"/doc_camp/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

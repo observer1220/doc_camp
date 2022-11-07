@@ -4,18 +4,10 @@
         <title>貓鼻頭露營莊園 Blog</title>
         <link>https://github.com/doc_camp/blog</link>
         <description>貓鼻頭露營莊園 Blog</description>
-        <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <item>
-            <title><![CDATA[A區]]></title>
-            <link>https://github.com/doc_camp/blog/welcome</link>
-            <guid>welcome</guid>
-            <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[Docusaurus]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="Docusaurus" src="/doc_camp/assets/images/banner-58338b921c28b1bb6f1ed0676dabb38f.jpg" width="1440" height="490" class="img_ev3q"></p><ul><li>A 區</li><li><code>(平日)每帳 NT$1,100 起</code></li><li><code>7x9 草地(共 6 帳)</code></li><li><code>本園區禁止攜帶寵物入場</code></li><li><code>本園區禁止抽菸</code></li></ul><p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>]]></content:encoded>
-        </item>
         <item>
             <title><![CDATA[MDX Blog Post]]></title>
             <link>https://github.com/doc_camp/blog/mdx-blog-post</link>
