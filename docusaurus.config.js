@@ -52,6 +52,25 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        // trackingID: 'UA-141789564-1',
+        // anonymizeIP: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -105,31 +124,31 @@ const config = {
             title: '生態旅遊',
             // items: [
             //   {
-            //     label: 'Stack Overflow',
-            //     href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            //   },
-            //   {
-            //     label: 'Discord',
-            //     href: 'https://discordapp.com/invite/docusaurus',
-            //   },
-            //   {
-            //     label: 'Twitter',
-            //     href: 'https://twitter.com/docusaurus',
-            //   },
+            //     label: 'Blog',
+            //     to: '/blog',
+            //   }
             // ],
           },
           {
-            title: 'More',
-            // items: [
-            //   {
-            //     label: 'Blog',
-            //     to: '/blog',
-            //   },
-            //   {
-            //     label: 'GitHub',
-            //     href: 'https://github.com/facebook/docusaurus',
-            //   },
-            // ],
+            title: '社群媒體',
+            items: [
+              {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
+                label: 'Discord',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/docusaurus',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+            ],
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} 貓鼻頭露營莊園－箴雅設計`,
