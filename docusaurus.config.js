@@ -53,13 +53,13 @@ const config = {
   ],
 
   plugins: [
-    [
-      '@docusaurus/plugin-google-analytics',
-      {
-        trackingID: 'UA-141789564-1',
-        anonymizeIP: true,
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-google-analytics',
+    //   {
+    //     trackingID: 'UA-141789564-1',
+    //     anonymizeIP: true,
+    //   },
+    // ],
     [
       '@docusaurus/plugin-sitemap',
       {
