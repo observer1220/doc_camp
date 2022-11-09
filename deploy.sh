@@ -1,3 +1,5 @@
+# .\deploy.sh
+
 set -e
 
 git add .
