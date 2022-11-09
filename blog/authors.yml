@@ -4,14 +4,15 @@ endi:
   url: https://github.com/endiliey
   image_url: https://github.com/endiliey.png
 
-yangshun:
-  name: 野溪1號
-  title: Front End Engineer @ Facebook
+colo:
+  name: 超級寫手
+  title: 對王之王對穿腸
   url: https://github.com/yangshun
   image_url: https://github.com/yangshun.png
 
-slorber:
-  name: 阿瀚
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+kent:
+  name: Kent Shen
+  title: 前端工程師
+  url: https://github.com/observer1220
+  image_url: https://github.com/observer1220.png
+  email: observer1220@gmail.com
