@@ -56,8 +56,8 @@ const config = {
     [
       '@docusaurus/plugin-google-analytics',
       {
-        // trackingID: 'UA-141789564-1',
-        // anonymizeIP: true,
+        trackingID: 'UA-141789564-1',
+        anonymizeIP: true,
       },
     ],
     [
