@@ -52,24 +52,24 @@ const config = {
     ],
   ],
 
-  plugins: [
-    // [
-    //   '@docusaurus/plugin-google-analytics',
-    //   {
-    //     trackingID: 'UA-141789564-1',
-    //     anonymizeIP: true,
-    //   },
-    // ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        changefreq: 'weekly',
-        priority: 0.5,
-        ignorePatterns: ['/tags/**'],
-        filename: 'sitemap.xml',
-      },
-    ],
-  ],
+  // plugins: [
+  //   [
+  //     '@docusaurus/plugin-google-analytics',
+  //     {
+  //       trackingID: 'UA-141789564-1',
+  //       anonymizeIP: true,
+  //     },
+  //   ],
+  //   [
+  //     '@docusaurus/plugin-sitemap',
+  //     {
+  //       changefreq: 'weekly',
+  //       priority: 0.5,
+  //       ignorePatterns: ['/tags/**'],
+  //       filename: 'sitemap.xml',
+  //     },
+  //   ],
+  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
