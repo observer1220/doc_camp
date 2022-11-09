@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc_camp=self.webpackChunkdoc_camp||[]).push([[254],{5569:a=>{a.exports=JSON.parse('[{"label":"\u9732\u71df","permalink":"/doc_camp/blog/tags/\u9732\u71df","count":1},{"label":"docusaurus","permalink":"/doc_camp/blog/tags/docusaurus","count":2}]')}}]);
