@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdoc_camp=self.webpackChunkdoc_camp||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Best Camping Place","permalink":"/doc_camp/blog/first-blog-post"},{"title":"MDX Blog Post","permalink":"/doc_camp/blog/mdx-blog-post"}]}')}}]);
