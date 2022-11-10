@@ -24,6 +24,10 @@ export default function Home () {
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
+      {/* SEO優化用 */}
+      {/* <Head>
+        <meta property="og:image" content="image.png" />
+      </Head> */}
       <HomepageHeader />
       {/* <CarouselComponent /> */}
       <main>

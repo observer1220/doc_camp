@@ -57,25 +57,20 @@ const config = {
         anonymizeIP: true,
       },
     ],
-    //   [
-    //     '@docusaurus/plugin-sitemap',
-    //     {
-    //       changefreq: 'weekly',
-    //       priority: 0.5,
-    //       ignorePatterns: ['/tags/**'],
-    //       filename: 'sitemap.xml',
-    //     },
-    //   ],
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'daily',
+        priority: 0.8,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      },
+    ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // algolia: {
-      //   apiKey: "cf8e1169aabead63a438c734bf145b93",
-      //   appId: "EQ378FJWR1",
-      //   indexName: "doc_camp",
-      // },
       navbar: {
         title: '貓鼻頭露營莊園',
         logo: {
@@ -135,12 +130,20 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 貓鼻頭露營莊園－箴雅設計`,
+        copyright: `Copyright © ${new Date().getFullYear()} 貓鼻頭露營莊園－箴雅設計測試網站`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        { name: 'doc_camp', content: '露營, camp' }
+      ],
+      // algolia: {
+      //   apiKey: "cf8e1169aabead63a438c734bf145b93",
+      //   appId: "EQ378FJWR1",
+      //   indexName: "doc_camp",
+      // },
     }),
 };
 
