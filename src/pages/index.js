@@ -12,7 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import GSAP from "@site/src/components/GSAP";
 
-export default function Home() {
+export default function Home () {
   const { siteConfig } = useDocusaurusContext();
   useEffect(() => {
     AOS.init();

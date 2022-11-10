@@ -50,26 +50,23 @@ const config = {
         },
       }),
     ],
+    [
+      '@docusaurus/plugin-google-analytics',
+      {
+        trackingID: 'G-JPZLXDK9L2',
+        anonymizeIP: true,
+      },
+    ],
+    //   [
+    //     '@docusaurus/plugin-sitemap',
+    //     {
+    //       changefreq: 'weekly',
+    //       priority: 0.5,
+    //       ignorePatterns: ['/tags/**'],
+    //       filename: 'sitemap.xml',
+    //     },
+    //   ],
   ],
-
-  // plugins: [
-  //   [
-  //     '@docusaurus/plugin-google-analytics',
-  //     {
-  //       trackingID: 'UA-141789564-1',
-  //       anonymizeIP: true,
-  //     },
-  //   ],
-  //   [
-  //     '@docusaurus/plugin-sitemap',
-  //     {
-  //       changefreq: 'weekly',
-  //       priority: 0.5,
-  //       ignorePatterns: ['/tags/**'],
-  //       filename: 'sitemap.xml',
-  //     },
-  //   ],
-  // ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -121,15 +118,6 @@ const config = {
             ],
           },
           {
-            title: '生態旅遊',
-            // items: [
-            //   {
-            //     label: 'Blog',
-            //     to: '/blog',
-            //   }
-            // ],
-          },
-          {
             title: '社群媒體',
             items: [
               {
@@ -139,10 +127,6 @@ const config = {
               {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
               },
               {
                 label: 'GitHub',
