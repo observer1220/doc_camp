@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoc_camp=self.webpackChunkdoc_camp||[]).push([[545],{7176:e=>{e.exports=JSON.parse('{"permalink":"/doc_camp/blog/tags/\u591a\u65e5\u884c\u7a0b","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
