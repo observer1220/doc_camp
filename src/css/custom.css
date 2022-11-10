@@ -4,6 +4,14 @@
  * work well for content-centric websites.
  */
 
+body {
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;

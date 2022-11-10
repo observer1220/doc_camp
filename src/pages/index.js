@@ -1,62 +1,34 @@
 import React, { useEffect } from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import HomepageHeader from '@site/src/components/HomepageHeader';
+import CarouselComponent from '@site/src/components/Carousel'
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import ParallaxComponent from '@site/src/components/Parallax'
+import clsx from 'clsx';
 import styles from './index.module.css';
-import { Carousel } from 'antd';
-import 'antd/dist/antd.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Parallax } from 'react-parallax';
-
-function HomepageHeader () {
-  const { siteConfig } = useDocusaurusContext();
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            立即體驗
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home () {
   const { siteConfig } = useDocusaurusContext();
+  useEffect(() => {
+      AOS.init();
+      AOS.refresh();
+    }, []);
 
-  const onChange = (currentSlide) => {
-    // console.log(currentSlide);
-  };
+
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-        {/* <Carousel afterChange={onChange} autoplay effect="fade" dotPosition="right">
-          <img src='./img/camp/a-4.jpg' />
-          <img src='./img/camp/b-4.jpg' />
-          <img src='./img/camp/c-3.jpg' />
-          <img src='./img/camp/d-2.jpg' />
-          <img src='./img/camp/e-5.jpg' />
-          <img src='./img/camp/f-5.jpg' />
-          </Carousel> */}
       <HomepageHeader />
+      {/* <CarouselComponent /> */}
       <main>
-        {/* <Parallax bgImage="./img/camp/a-4.jpg" blur={0} strength={1000} style={{ height: '300px' }}>
-          Content goes here. Parallax height grows with content height.
-        </Parallax> */}
+        <div style={{ width:'100%', display:'flex', justifyContent:'center'}}>
+          <img src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6f64e5f7-19a5-471d-889e-65018dc18241/d4rj4lc-7fa63efc-84e3-417a-8c73-5f9bc6cc7e35.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZmNjRlNWY3LTE5YTUtNDcxZC04ODllLTY1MDE4ZGMxODI0MVwvZDRyajRsYy03ZmE2M2VmYy04NGUzLTQxN2EtOGM3My01ZjliYzZjYzdlMzUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.FgnS8TBwITHp8m1EWdFHE4bkdlQvy4JmYvtt_wjiYDc' />
+        </div>
+        {/* <ParallaxComponent /> */}
         {/* <div data-aos="fade-up" > */}
           <HomepageFeatures />
         {/* </div> */}
