@@ -1,0 +1,57 @@
+.title {
+    font-size: 5em;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    /* padding-bottom: 12em; */
+}
+
+#slide0 {
+    background-image: url('https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/08/01/1/13174579.jpg&x=0&y=0&sw=0&sh=0&sl=W&fw=1050');
+    background-size: cover;
+    background-position: center;
+}
+
+.fp-section {
+    text-align: center;
+}
+
+button {
+    padding: 0.93em 1.87em;
+    background: #35495e;
+    border-radius: 5px;
+    border-color: transparent;
+    display: block;
+    color: #fff;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 0.85em;
+}
+
+.actions {
+    list-style-type: none;
+}
+
+.actions button {
+    padding: 0.93em 1.87em;
+    background: #35495e;
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    margin: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.actions button:hover {
+    background: #fff;
+    color: #35495e;
+}

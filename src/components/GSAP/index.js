@@ -1,41 +1,14 @@
-import React, { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import styles from "./styles.module.css";
-
-const Box = ({ children, className }) => {
-  return <div className={"box " + className}>{children}</div>;
-};
-
-function Container({ children }) {
-  return (
-    <div>
-      <Box>Don't Animate Me</Box>
-    </div>
-  );
-}
+import React from "react";
+import { Controls, PlayState, Tween } from "react-gsap";
 
 export default function GSAP() {
-  const app = useRef();
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      // Target the two specific elements we have asigned the animate class
-      gsap.to(".animate", {
-        x: 200,
-        repeat: -1,
-        repeatDelay: 1,
-        yoyo: true,
-      });
-    }, app); // <- Scope!
-
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <div className={styles.app} ref={app}>
-      <Box className="animate">Box</Box>
-      <Container></Container>
-      <Box className="animate">Box</Box>
-    </div>
+    <Tween to={{ x: "200px" }} stagger={0.2} ease="elastic.out(0.2, 0.1)">
+      <div style={{ width: "20px", height: "20px", background: "green" }} />
+      <div style={{ width: "20px", height: "20px", background: "green" }} />
+      <div style={{ width: "20px", height: "20px", background: "green" }} />
+      <div style={{ width: "20px", height: "20px", background: "green" }} />
+      <div style={{ width: "20px", height: "20px", background: "green" }} />
+    </Tween>
   );
 }
