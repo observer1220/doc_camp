@@ -40,8 +40,9 @@ export default function Home() {
         {/* <div data-aos="fade-up" > */}
         <HomepageFeatures />
         {/* </div> */}
-        {/* <PersonInformation /> */}
+
         <GSAP />
+        <PersonInformation />
       </main>
     </Layout>
   );
