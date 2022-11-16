@@ -43,7 +43,7 @@ export default function Home() {
         {/* </div> */}
 
         {/* <GSAP /> */}
-        <PersonInformation />
+        {/* <PersonInformation /> */}
       </main>
     </Layout>
   );

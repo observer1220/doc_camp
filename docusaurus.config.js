@@ -86,11 +86,12 @@ const config = {
           },
           { to: "/blog", label: "生態旅遊", position: "left" },
           { to: "/about", label: "關於我們", position: "right" },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+          { to: "/dynamic", label: "動態測試", position: "right" },
+          {
+            href: "https://github.com/facebook/docusaurus",
+            label: "GitHub",
+            position: "right",
+          },
         ],
       },
       footer: {
