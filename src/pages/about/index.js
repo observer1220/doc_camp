@@ -77,12 +77,14 @@ export default function AboutPage() {
         pluginWrapper={pluginWrapper}
         // Get one from https://alvarotrigo.com/fullPage/pricing/
         licenseKey={"YOUR_KEY_HERE"}
-        // scrollingSpeed={2000}
+        scrollingSpeed={1000}
         navigation
         navigationTooltips={["Model S", "Lamborghini"]}
         showActiveTooltip={true}
         continuousVertical={true}
         fadingEffect={true}
+        fitToSection={true}
+        fitToSectionDelay={100}
         // parallax={true}
         // parallaxOptions={{
         //   type: "reveal",
@@ -112,9 +114,9 @@ export default function AboutPage() {
                   }}
                 >
                   <h3 className={styles.title}>{item.title}</h3>
-                  <div style={{ background: "black" }}>
-                    <p className={styles.text}>{item.description}</p>
-                  </div>
+                  {/* <div style={{ background: "black" }}> */}
+                  <p className={styles.text}>{item.description}</p>
+                  {/* </div> */}
                   <div style={{ display: "flex", justifyContent: "center" }}>
                     <Button
                       shape="circle"
