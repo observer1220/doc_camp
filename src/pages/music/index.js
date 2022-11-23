@@ -4,7 +4,8 @@ import 'react-jinke-music-player/assets/index.css'
 import { Button } from "antd";
 // import { audioList1, audioList2 } from './mock'
 import BrowserOnly from '@docusaurus/BrowserOnly';
-
+import HTMLFlipBook from "react-pageflip";
+import styles from "./index.module.css";
 const audioList1 = [
   {
     name: 'Despacito',
@@ -78,7 +79,8 @@ const audioList2 = [
 export default function MusicPage() {
   const [data, setData] = useState()
 
-  const onChangeToFirstAudioList = () => {
+  const onChangeToFirstAudioList = (event) => {
+    console.log(event.target);
     setData({
       clearPriorAudioLists: true,
       quietUpdate: false,
@@ -86,7 +88,8 @@ export default function MusicPage() {
     })
   }
 
-  const onChangeToSecondAudioList = () => {
+  const onChangeToSecondAudioList = (event) => {
+    console.log(event.target);
     setData({
       clearPriorAudioLists: true,
       quietUpdate: false,
@@ -96,25 +99,34 @@ export default function MusicPage() {
 
   return (
     <BrowserOnly>
-      {
-        () => (<>
-          <div className="settings">
-            <Button type="button" onClick={onChangeToFirstAudioList}>
-              西洋最新 ({audioList1.length})
-            </Button>
-            <Button type="button" onClick={onChangeToSecondAudioList}>
-              周杰倫 八度空間 ({audioList2.length})
-            </Button>
-          </div>
-          <ReactJkMusicPlayer
-            {...data}
-            mode={"full"}
-            autoHiddenCover={true}
-            showLyric={true}
-            volumeFade={{ fadeIn: 500, fadeOut: 500 }}
-          /></>)
-      }
-
+      {() => <>
+        <div>
+          {/* <Button type="button" onClick={onChangeToFirstAudioList}>
+            Latest ({audioList1.length})
+          </Button>
+          <Button type="button" onClick={onChangeToSecondAudioList}>
+            Jay Chou ({audioList2.length})
+          </Button> */}
+          <HTMLFlipBook width={300} height={500}>
+            <div className={styles.demoPage}>
+              Latest ({audioList1.length})
+            </div>
+            <div className={styles.demoPage}>
+              Jay Chou ({audioList2.length})
+            </div>
+            <div className={styles.demoPage}>
+              測試 ({audioList2.length})
+            </div>
+          </HTMLFlipBook>
+        </div>
+        <ReactJkMusicPlayer
+          {...data}
+          mode={"full"}
+          autoHiddenCover={true}
+          showLyric={true}
+          volumeFade={{ fadeIn: 500, fadeOut: 500 }}
+        />
+      </>}
     </BrowserOnly>
   )
 }
