@@ -1,4 +1,11 @@
-export const audioList1 = [
+import React, { useState } from "react";
+import ReactJkMusicPlayer from 'react-jinke-music-player'
+import 'react-jinke-music-player/assets/index.css'
+import { Button } from "antd";
+// import { audioList1, audioList2 } from './mock'
+import BrowserOnly from '@docusaurus/BrowserOnly';
+
+const audioList1 = [
   {
     name: 'Despacito',
     singer: 'Luis Fonsi',
@@ -25,8 +32,7 @@ export const audioList1 = [
   }
 ]
 
-export const audioList2 = [
-
+const audioList2 = [
   {
     name: '半獸人',
     singer: 'Jay Chou',
@@ -68,3 +74,47 @@ export const audioList2 = [
       'https://res.cloudinary.com/dbjxyxxlj/video/upload/v1669133302/JayChou%EF%BC%8DOctaveSpace/%E6%9C%80%E5%BE%8C%E7%9A%84%E6%88%B0%E5%BD%B9_ososej.mp3',
   },
 ]
+
+export default function MusicPage() {
+  const [data, setData] = useState()
+
+  const onChangeToFirstAudioList = () => {
+    setData({
+      clearPriorAudioLists: true,
+      quietUpdate: false,
+      audioLists: audioList1,
+    })
+  }
+
+  const onChangeToSecondAudioList = () => {
+    setData({
+      clearPriorAudioLists: true,
+      quietUpdate: false,
+      audioLists: audioList2,
+    })
+  }
+
+  return (
+    <BrowserOnly>
+      {
+        () => (<>
+          <div className="settings">
+            <Button type="button" onClick={onChangeToFirstAudioList}>
+              西洋最新 ({audioList1.length})
+            </Button>
+            <Button type="button" onClick={onChangeToSecondAudioList}>
+              周杰倫 八度空間 ({audioList2.length})
+            </Button>
+          </div>
+          <ReactJkMusicPlayer
+            {...data}
+            mode={"full"}
+            autoHiddenCover={true}
+            showLyric={true}
+            volumeFade={{ fadeIn: 500, fadeOut: 500 }}
+          /></>)
+      }
+
+    </BrowserOnly>
+  )
+}
