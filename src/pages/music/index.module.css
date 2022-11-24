@@ -1,3 +1,27 @@
 .demoPage {
-  border: 1px solid black;
+  padding: 20px;
+  background-color: #fdfaf7;
+  color: #785e3a;
+  border: 1px solid #c2b5a3;
+  overflow: auto;
+}
+
+.demoButton {
+  margin: 5px 0;
+}
+
+.demoImage {
+  width: 300px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.demoParagraph {
+  flex-grow: 1;
+  font-size: 80%;
+  text-align: justify;
+  margin-top: 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #f4e8d7;
 }
