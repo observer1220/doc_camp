@@ -72,7 +72,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "貓鼻頭露營莊園",
+        title: "前端實驗站",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",

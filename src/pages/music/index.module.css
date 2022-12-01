@@ -1,3 +1,12 @@
+.backLayer {
+  /* background-image: url('https://gw.alipayobjects.com/mdn/rms_a8a5bf/afts/file/A*mnpLT77ldiIAAAAAAAAAAAAAARQnAQ'); */
+}
+
+.container {
+  /* width: 300px; */
+  /* margin: 0 auto; */
+}
+
 .demoPage {
   padding: 20px;
   background-color: #fdfaf7;
@@ -7,6 +16,7 @@
 }
 
 .demoButton {
+  width: 100%;
   margin: 5px 0;
 }
 
