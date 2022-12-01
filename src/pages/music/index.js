@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
 import { Button } from "antd";
@@ -76,8 +76,9 @@ const audioList2 = [
   },
 ]
 
-export default function MusicPage() {
+export default function MusicPage () {
   const [data, setData] = useState()
+  const book = useRef();
 
   const onChangeToFirstAudioList = (event) => {
     console.log(event.target);
@@ -101,19 +102,32 @@ export default function MusicPage() {
     <BrowserOnly>
       {() => <>
         <div>
-          {/* <Button type="button" onClick={onChangeToFirstAudioList}>
-            Latest ({audioList1.length})
-          </Button>
-          <Button type="button" onClick={onChangeToSecondAudioList}>
-            Jay Chou ({audioList2.length})
+          {/* <Button onClick={() =>
+            book.current.pageFlip().flipNext()}>
+            下一頁
           </Button> */}
-          <HTMLFlipBook width={300} height={500}>
-            <div className={styles.demoPage}>
-              Latest ({audioList1.length})
+          <HTMLFlipBook width={300} height={600} drawShadow={true} flippingTime={2000} swipeDistance={10} ref={book}>
+            {/* 第1頁 */}
+            <div className={styles.demoPage} >
+              <Button type="primary" className={styles.demoButton} onClick={onChangeToFirstAudioList}>
+                Despacito ({audioList1.length})
+              </Button>
+              <img src={audioList1[0].cover} className={styles.demoImage} />
+              <p className={styles.demoParagraph}>
+                Elit consectetur eiusmod aliquip ipsum dolore anim quis quis ea proident excepteur. Do officia cillum ipsum fugiat proident reprehenderit id minim. Officia laboris labore quis aliqua veniam aute. Consequat ea irure id excepteur irure culpa officia irure id minim cupidatat aliqua eu. Ipsum culpa sint consectetur aute eiusmod anim non commodo magna eu deserunt reprehenderit reprehenderit. Esse mollit incididunt do consequat. Voluptate aute excepteur aliquip amet ea exercitation.
+              </p>
             </div>
+            {/* 第2頁 */}
             <div className={styles.demoPage}>
-              Jay Chou ({audioList2.length})
+              <Button type="primary" className={styles.demoButton} onClick={onChangeToSecondAudioList}>
+                Jay Chou ({audioList2.length})
+              </Button>
+              <img src={audioList1[1].cover} className={styles.demoImage} />
+              <p className={styles.demoParagraph}>
+                Pariatur exercitation consectetur pariatur voluptate qui. Deserunt aliqua aliquip mollit voluptate non ad mollit nostrud magna in nostrud duis excepteur anim. Cupidatat Lorem quis aute mollit. Commodo cillum occaecat dolore consequat esse exercitation exercitation qui. Laboris tempor culpa sit excepteur aute consequat non aliqua. Cillum ullamco dolor consectetur ut dolore laborum culpa ut consequat anim laborum commodo consectetur. Cupidatat laboris incididunt dolore magna incididunt nulla.
+              </p>
             </div>
+            {/* 第3頁 */}
             <div className={styles.demoPage}>
               測試 ({audioList2.length})
             </div>
