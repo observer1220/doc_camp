@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "@theme/Layout";
 import styles from "./index.module.css";
 import { BarChart, ComposedChart, DonutChart, LineChart, PieChart, RadarChart, RadialChart, ScatterChart } from '@ui5/webcomponents-react-charts';
@@ -6,13 +6,131 @@ import { Grid, Tab, TabContainer } from "@ui5/webcomponents-react";
 import { Button, Card, Col, Row, Statistic } from "antd";
 import { LineChartData, BarChartData, RadarChartData, ScatterChartData, DonutChartData, PieChartData } from './mock'
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
+import { Line, Pie } from '@antv/g2plot';
+import { last } from '@antv/util';
+import * as _ from '@antv/util';
+import axios from "axios";
+import createG2 from 'g2-react';
+import { Stat } from 'g2';
+import { diamond } from './diamand'
 
 export default function ChartPage() {
+  const myChart = useRef();
+  const [state] = useState({
+    data: diamond.slice(0, diamond.length / 2 - 1),
+    width: 500,
+    height: 250,
+    plotCfg: {
+      margin: [10, 100, 50, 120],
+    },
+  })
+
+  const Pie = createG2(chart => {
+    chart.coord('theta');
+    chart.intervalStack().position(Stat.summary.proportion()).color('cut');
+    chart.render();
+  });
+
+  const changeHandler = () => {
+    const chart = myChart.current
+    // console.log(chart)
+    // chart.clear();
+    // chart.intervalStack().position(Stat.summary.proportion()).color('clarity');
+    // chart.current.render();
+  }
+
+
+  // 第1個圖表
+  const divStyles = {
+    position: 'absolute',
+    background: 'rgba(255,255,255,0.95)',
+    boxShadow: 'rgb(174, 174, 174) 0px 0px 10px',
+    borderRadius: '4px',
+  };
+
+  const setStyles = (container, styles) => {
+    for (const key in styles) {
+      container.style[key] = styles[key];
+    }
+  };
+
+  axios.get('https://gw.alipayobjects.com/os/bmw-prod/5a209bb2-ee85-412f-a689-cdb16159a459.json')
+    .then((res) =>
+      res.data.filter((d) => ['United States', 'France', 'Germany', 'Austria', 'Japan', 'Sweden'].includes(d.country)))
+    .then((data) => {
+      console.log(data);
+      const line = new Line('container', {
+        padding: 'auto',
+        appendPadding: [8, 10, 0, 10],
+        data,
+        xField: 'year',
+        yField: 'value',
+        seriesField: 'country',
+        smooth: true,
+        lineStyle: ({ country }) => {
+          const importantCountries = ['United States', 'France', 'Germany'];
+          const idx = importantCountries.indexOf(country);
+          return { lineWidth: idx !== -1 ? 2 : 1 };
+        },
+        interactions: [{ type: 'brush' }],
+        tooltip: {
+          follow: true,
+          enterable: true,
+          offset: 18,
+          shared: true,
+          marker: { lineWidth: 0.5, r: 3 },
+        },
+      });
+
+      line.render();
+
+      const createPie = (container, data) => {
+        const piePlot = new Pie(container, {
+          data,
+          width: 120,
+          height: 120,
+          appendPadding: 10,
+          autoFit: false,
+          angleField: 'value',
+          colorField: 'type',
+          legend: false,
+          tooltip: false,
+          animation: false,
+          color: line.chart.themeObject.colors10,
+          label: {
+            type: 'inner',
+            offset: '-10%',
+            content: ({ percent }) => `${(percent * 100).toFixed(0)}%`,
+          },
+        });
+        piePlot.render();
+      };
+
+      line.update({
+        tooltip: {
+          customContent: (value, items) => {
+            const pieData = items.map((item) => ({
+              type: item.name,
+              value: Number(item.value),
+            }));
+            const container = document.createElement('div');
+            const pieContainer = document.createElement('div');
+            setStyles(container, divStyles);
+            createPie(pieContainer, pieData);
+            container.appendChild(pieContainer);
+            return container;
+          },
+        },
+      });
+      // 初始化，默认激活
+      const point = line.chart.getXY(last(data.filter((d) => !!d.value)));
+      line.chart.showTooltip(point);
+    });
+
   return (
     <Layout title={'各式圖表'} description="Description will go into a meta tag in <head />">
-      <TabContainer
-        onTabSelect={function noRefCheck() { }}>
-        <Tab additionalText="5" text="Tab One" icon="menu" selected>
+      <TabContainer>
+        <Tab text="SAP UI5圖表" selected>
           <Grid>
             <Card data-layout-span="XL4 L4 M12 S12">
               <Statistic title="Active" value={11.28} precision={2} valueStyle={{ color: '#3f8600' }}
@@ -163,8 +281,11 @@ export default function ChartPage() {
             />
           </Grid>
         </Tab>
-        <Tab additionalText="20" icon="activities" selected text="Tab Two">
-          Content Tab 2
+        <Tab text="AntV圖表">
+          {/* 第1張圖 */}
+          <div id="container" />
+          {/* 第2張圖 */}
+          <div id="container"></div>
         </Tab>
       </TabContainer>
     </Layout>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactJkMusicPlayer from 'react-jinke-music-player'
 import 'react-jinke-music-player/assets/index.css'
 import { Button, Space } from "antd";
@@ -10,6 +10,12 @@ import styles from "./index.module.css";
 export default function MusicPage() {
   const [data, setData] = useState()
   const book = useRef();
+
+  useEffect(() => {
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+      console.log('當前裝置是移動裝置:', /Mobi|Android|iPhone/i.test(navigator.userAgent));
+    }
+  })
 
   return (
     <BrowserOnly>
