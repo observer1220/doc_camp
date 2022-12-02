@@ -1,10 +1,15 @@
 .backLayer {
-  /* background-image: url('https://gw.alipayobjects.com/mdn/rms_a8a5bf/afts/file/A*mnpLT77ldiIAAAAAAAAAAAAAARQnAQ'); */
+  background-image: url('https://gw.alipayobjects.com/mdn/rms_a8a5bf/afts/file/A*mnpLT77ldiIAAAAAAAAAAAAAARQnAQ.gif');
 }
 
 .container {
-  /* width: 300px; */
-  /* margin: 0 auto; */
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 
 .demoPage {
